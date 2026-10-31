@@ -21,32 +21,15 @@ type QueryCall = {
 
 type MockRow = Record<string, unknown>;
 
-/**
- * Creates a mock Supabase client with a per-table response queue.
- *
- * Usage:
- *   const { client, mockFrom, whenFrom } = createMockSupabaseClient();
- *   whenFrom('profiles').select({ data: [...], error: null });
- *   const result = await client.from('profiles').select('*').eq('role', 'applicant');
- */
 
 /**
  * Creates a mock Supabase client.
  *
- * 
- * {
-        client,
-        mockFrom,
-        whenFrom,
-        setMockTable,
-        getRows,
-        queryLog,
-        reset,
-    };
-
  * Usage:
  *   const { client, mockFrom, whenFrom, setMockTable } = createMockSupabaseClient();
+ *
  *   whenFrom('profiles').select({ data: [...], error: null });
+ *
  *   setMockTable(name, data)
  */
 export function createMockSupabaseClient() {
