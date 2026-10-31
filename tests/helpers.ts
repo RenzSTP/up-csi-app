@@ -21,7 +21,6 @@ type QueryCall = {
 
 type MockRow = Record<string, unknown>;
 
-
 /**
  * Creates a mock Supabase client.
  *
